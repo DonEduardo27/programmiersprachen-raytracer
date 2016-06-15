@@ -9,10 +9,13 @@ class Sphere: public Shape
 public:
 	Sphere();
 	Sphere(glm::vec3 const& ctr, float rad);
+	Sphere(glm::vec3 const& ctr, float rad, std::string const& name, Color const& farbe);
+	
 	float area()   const override;
 	float volume() const override;
-	glm::vec3 getctr() const;
-	float     getrad() const;
+	std::ostream & print ( std :: ostream & os ) const override;
+	glm::vec3 const& getctr() const;
+	float     const& getrad() const;
 	void setctr(glm::vec3 ctr);
 	void setrad(float     rad);
 
