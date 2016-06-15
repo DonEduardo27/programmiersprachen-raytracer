@@ -3,6 +3,8 @@
 
 #include <string>
 #include "color.hpp"
+# include <glm/glm.hpp>
+# include <glm/gtx/intersect.hpp>
 
 class Shape
 {

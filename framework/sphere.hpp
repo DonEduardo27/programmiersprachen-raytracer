@@ -2,6 +2,8 @@
 #define SPHERE_HPP
 
 #include "shape.hpp"
+#include "ray.hpp"
+
 #include <glm/vec3.hpp>
 
 class Sphere: public Shape
@@ -18,7 +20,7 @@ public:
 	float     const& getrad() const;
 	void setctr(glm::vec3 ctr);
 	void setrad(float     rad);
-
+	bool intersect(Ray const& ray, float distance);
 
 private: 
 	glm::vec3 ctr_;

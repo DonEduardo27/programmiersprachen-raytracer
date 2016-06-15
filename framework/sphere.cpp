@@ -44,3 +44,8 @@ float const& Sphere::getrad() const
 {
 	return rad_;
 }
+
+bool Sphere::intersect(Ray const& ray, float distance) 
+{
+	return glm::intersectRaySphere(ray.origin, ray.direction, ctr_, rad_ * rad_, distance);
+}
