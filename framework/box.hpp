@@ -9,14 +9,14 @@ class Box: public Shape
 public:
 	Box();
 	Box(glm::vec3 const& min, glm::vec3 const& max);
-	
+	Box(glm::vec3 const& min, glm::vec3 const& max, std::string const& name, Color const& farbe);
+
 	float area()   const override;
 	float volume() const override;
 
-	glm::vec3 getmin();
-	glm::vec3 getmax();
-	void setmin(glm::vec3 min);
-	void setmax(glm::vec3 max);
+	glm::vec3 const& getmin() const;
+	glm::vec3 const& getmax() const;
+
 
 private: 
 	glm::vec3 min_;

@@ -1,21 +1,21 @@
 #ifndef SHAPE_HPP
 #define SHAPE_HPP
 
+#include <string>
+#include "color.hpp"
+
 class Shape
 {
 public:
+	Shape();
+	Shape(std::string const & name, Color const& color);
+	std::string getname() const;
+	Color const& getcolor() const;
 
-virtual float area()   const = 0;
-virtual float volume() const = 0;
-
+	virtual float area()   const = 0;
+	virtual float volume() const = 0;
+private:
+	std::string name_;
+	Color color_;
 };
 #endif
-
-
-
-/*Leiten Sie nun die Klassen Sphere und Box von Shape ab. Die Klasse Sphere
-besitzt einen Mittelpunkt vom Typ glm::vec3 und einen Radius. Die Achsen-
-parallele Box besitzt ein Minimum und ein Maximum vom Typ glm::vec3.
-Includieren Sie dazu den Header# include < glm / vec3 . hpp >
-Implementieren Sie geeignete Konstruktoren, get-Methoden, die Methode area
-und die Methode volume. Testen Sie diese.*/
