@@ -30,6 +30,17 @@ float Box::volume() const
 	float c = max_.z - min_.z;
 	return a*b*c;
 }
+std::ostream & Box::print ( std :: ostream & os ) const
+{
+	Shape::print(os);
+	os <<"("
+	<< min_.x << ", "
+	<< min_.y << ", "
+	<< min_.z << ") "<<std::endl<<"("
+	<< max_.x << ", "
+	<< max_.y << ", "
+	<< max_.z << ")";
+}
 
 glm::vec3 const& Box::getmin() const
 {

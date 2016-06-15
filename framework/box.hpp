@@ -17,6 +17,8 @@ public:
 	glm::vec3 const& getmin() const;
 	glm::vec3 const& getmax() const;
 
+	std::ostream & print ( std :: ostream & os ) const override;
+
 
 private: 
 	glm::vec3 min_;

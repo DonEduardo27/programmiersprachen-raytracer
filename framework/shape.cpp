@@ -15,3 +15,12 @@ Color const& Shape::getcolor() const
 {
   return color_;
 }
+std::ostream& operator<<(std::ostream& os, Shape const& s)
+{
+  return s.print(os);
+}
+std::ostream & Shape::print ( std :: ostream & os ) const 
+{
+  os << name_ << std::endl << color_;
+  return os;
+}

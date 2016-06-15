@@ -20,6 +20,8 @@ REQUIRE(bochs2->getmin()==a);
 REQUIRE(bochs2->getmax()==b);
 REQUIRE(bochs2->volume()== 8);
 REQUIRE(bochs2->area()==28);
+
+bochs2->print(std::cout);
 }
 
 int main(int argc, char *argv[])
