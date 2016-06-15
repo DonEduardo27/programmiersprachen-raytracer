@@ -47,5 +47,16 @@ bochs2->print(std::cout);
 
 int main(int argc, char *argv[])
 {
+
+Color red (255 , 0 , 0);
+glm :: vec3 position (0 ,0 ,0);
+
+std :: shared_ptr <Sphere> s1 = std :: make_shared < Sphere >( position , 1.2 , " sphere0 " , red );
+std :: shared_ptr <Shape>  s2 = std :: make_shared < Sphere >( position , 1.2 , " sphere1 " , red );
+
+s1 -> print ( std :: cout );
+std::cout<<std::endl;
+s2 -> print ( std :: cout );
+
   return Catch::Session().run(argc, argv);
 }

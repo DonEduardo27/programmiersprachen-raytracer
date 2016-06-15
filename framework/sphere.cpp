@@ -28,11 +28,11 @@ float Sphere::volume() const
 std::ostream & Sphere::print ( std :: ostream & os ) const
 {
 	Shape::print(os);
-	os <<"("
+	os <<"Center: ("
 	<< ctr_.x << ", "
 	<< ctr_.y << ", "
-	<< ctr_.z << ") "<<std::endl<<"("
-	<< rad_ << ". ";
+	<< ctr_.z << ") , Radius: ("
+	<< rad_ << ") ";
 }
 
 glm::vec3 const& Sphere::getctr() const
