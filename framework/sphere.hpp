@@ -12,7 +12,8 @@ public:
 	Sphere();
 	Sphere(glm::vec3 const& ctr, float rad);
 	Sphere(glm::vec3 const& ctr, float rad, std::string const& name, Color const& farbe);
-	
+	~Sphere();
+
 	float area()   const override;
 	float volume() const override;
 	std::ostream & print ( std :: ostream & os ) const override;

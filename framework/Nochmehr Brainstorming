@@ -26,3 +26,51 @@ Object *Obj1 = new Object;
 they are created at run-time 
 
 Beide dynamisch (Da "new") können während Laufzeit gelöscht werden. 
+
+virtual:
+
+makin' a lil' Shape
+makin' a lil' Sphere
+makin' a lil' Shape
+makin' a lil' Sphere
+
+ It's tellin' ya somethin' 'bout it: 
+ Ma Name's  sphere0 
+ and I look like (255,0,0)
+I'm livin in 
+ (0, 0, 0) , I'm (1.2) tall
+
+ It's tellin' ya somethin' 'bout it: 
+ Ma Name's  sphere1 
+ and I look like (255,0,0)
+I'm livin in 
+ (0, 0, 0) , I'm (1.2) tall
+Killing Sphere
+Killing Shape
+Killing Sphere
+Killing Shape
+
+sonst:
+
+makin' a lil' Shape
+makin' a lil' Sphere
+makin' a lil' Shape
+makin' a lil' Sphere
+
+ It's tellin' ya somethin' 'bout it: 
+ Ma Name's  sphere0 
+ and I look like (255,0,0)
+I'm livin in 
+ (0, 0, 0) , I'm (1.2) tall
+
+ It's tellin' ya somethin' 'bout it: 
+ Ma Name's  sphere1 
+ and I look like (255,0,0)
+I'm livin in 
+ (0, 0, 0) , I'm (1.2) tall
+Killing Sphere
+Killing Shape
+Killing Shape
+
+unterschied: beim zerstören wird die shape, nicht extra die sphere zerstört.
+

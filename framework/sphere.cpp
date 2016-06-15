@@ -5,17 +5,21 @@ Sphere::Sphere():
 	Shape(),
 	ctr_{0.0f,0.0f,0.0f},
 	rad_{0.1}
-	{}
+	{std::cout<<"makin' a lil' Sphere"<<std::endl;}
 Sphere::Sphere(glm::vec3 const& ctr, float rad):
 	Shape(),
 	ctr_{ctr},
 	rad_{rad}
-	{}
+	{std::cout<<"makin' a lil' Sphere"<<std::endl;}
 Sphere::Sphere(glm::vec3 const& ctr, float rad, std::string const& name, Color const& farbe):
 	Shape(name, farbe),
 	ctr_{ctr},
 	rad_{rad}
-	{}
+	{std::cout<<"makin' a lil' Sphere"<<std::endl;}
+Sphere::~Sphere()
+{
+	std::cout<<"Killing Sphere"<<std::endl;
+}
 
 float Sphere::area() const
 {
@@ -28,11 +32,11 @@ float Sphere::volume() const
 std::ostream & Sphere::print ( std :: ostream & os ) const
 {
 	Shape::print(os);
-	os <<"Center: ("
+	os <<"I'm livin in \n ("
 	<< ctr_.x << ", "
 	<< ctr_.y << ", "
-	<< ctr_.z << ") , Radius: ("
-	<< rad_ << ") ";
+	<< ctr_.z << ") , I'm ("
+	<< rad_ << ") tall"<<std::endl;
 }
 
 glm::vec3 const& Sphere::getctr() const
