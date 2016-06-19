@@ -4,7 +4,7 @@
 Sphere::Sphere():
 	Shape(),
 	ctr_{0.0f,0.0f,0.0f},
-	rad_{0.1}
+	rad_{1}
 	{std::cout<<"makin' a lil' Sphere"<<std::endl;}
 Sphere::Sphere(glm::vec3 const& ctr, float rad):
 	Shape(),

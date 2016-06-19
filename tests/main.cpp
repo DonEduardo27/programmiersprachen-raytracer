@@ -42,6 +42,37 @@ REQUIRE(bochs2->getmax()==b);
 REQUIRE(bochs2->volume()== 8);
 REQUIRE(bochs2->area()==28);
 
+Sphere kgl {};
+Sphere kgl2 {glm::vec3{3,2,1},4};
+
+glm::vec3 c{3,2,1};
+
+REQUIRE(kgl.getctr()==null);
+REQUIRE(kgl.getrad()==1);
+REQUIRE(kgl2.getctr()==c);
+REQUIRE(kgl2.getrad()==4);
+REQUIRE(kgl2.volume()== Approx(268.08258f));
+REQUIRE(kgl2.area()==Approx(201.06194f));
+
+}
+
+TEST_CASE("3","[three]")
+{
+Box bochs {glm::vec3 {1,2,3}, glm::vec3 {4,5,6}, "Don Box", {1,0,0}};
+Sphere kgl {glm::vec3 {-1,-2,-3}, 1,"Soy una Kugel", {0,1,1}};
+
+Color col1 = kgl.getcolor();
+Color col2 = bochs.getcolor();
+REQUIRE(kgl.getname()=="Soy una Kugel");
+REQUIRE(col1.r == 0);
+REQUIRE(col1.g == 1);
+REQUIRE(col1.b == 1);
+
+REQUIRE(bochs.getname()=="Don Box");
+REQUIRE(col2.r == 1);
+REQUIRE(col2.g == 0);
+REQUIRE(col2.b == 0);
+
 }
 
 int main(int argc, char *argv[])
