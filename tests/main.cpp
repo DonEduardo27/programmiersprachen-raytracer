@@ -75,6 +75,23 @@ REQUIRE(col2.b == 0);
 
 }
 
+TEST_CASE("6","[six]")
+{
+
+Sphere kgl {glm::vec3 {3,3,3}, 1,"Soy una Kugel", {0,1,1}};
+
+Ray ralf   {glm::vec3 {1,1,1}, glm::vec3 {4,4,4}};
+Ray ronny  {glm::vec3 {4,4,4}, glm::vec3 {2,2,2}};
+Ray roland {glm::vec3 {4,4,4}, glm::vec3 {6,6,6}};
+
+REQUIRE( kgl.intersect(ralf , 2)); 
+REQUIRE( kgl.intersect(ralf , 0));
+REQUIRE(!kgl.intersect(ronny, 2));
+REQUIRE(!kgl.intersect(ronny, 0));
+REQUIRE(!kgl.intersect(roland,2));
+REQUIRE(!kgl.intersect(roland,0));
+}
+
 int main(int argc, char *argv[])
 {
 
