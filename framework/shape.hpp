@@ -2,9 +2,11 @@
 #define SHAPE_HPP
 
 #include <string>
+#include "ray.hpp"
 #include "color.hpp"
-# include <glm/glm.hpp>
-# include <glm/gtx/intersect.hpp>
+#include "material.hpp"
+#include <glm/glm.hpp>
+#include <glm/gtx/intersect.hpp>
 
 class Shape
 {
@@ -17,7 +19,10 @@ public:
 
 	virtual float area()   const = 0;
 	virtual float volume() const = 0;
+	//virtual bool  intersect ( Ray const & ray , float & t ) = 0;
+
 	virtual std::ostream & print ( std :: ostream & os ) const ;
+	
 
 private:
 	std::string name_;

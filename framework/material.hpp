@@ -3,15 +3,32 @@
 
 #include <ostream>
 #include "color.hpp"
-#include <String>
+#include <string>
 
 struct Material
-{
-	std::String name_;
+{	
+	std::string name_;
 	Color ka_;
 	Color kd_;
 	Color ks_;
 	float m_;
+
+	Material():
+
+	name_{"Default"},
+	ka_  {0.0f,0.0f,0.0f},
+	kd_  {0.0f,0.0f,0.0f},
+	ks_  {0.0f,0.0f,0.0f},
+	m_   {0}{}
+
+	Material(std::string name, Color ka, Color kd, Color ks, float m):
+
+	name_{name},
+	ka_  {ka},
+	kd_  {kd},
+	ks_  {ks},
+	m_   {m}{}
+
 
 
 	friend std::ostream& operator<<(std::ostream& os, Material const& m ) 
