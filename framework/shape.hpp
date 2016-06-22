@@ -12,10 +12,10 @@ class Shape
 {
 public:
 	Shape();
-	Shape(std::string const & name, Color const& color);
+	Shape(std::string const & name, Material const& mat);
 	~Shape();
 	std::string getname() const;
-	Color const& getcolor() const;
+	Material const& getmat() const;
 
 	virtual float area()   const = 0;
 	virtual float volume() const = 0;
@@ -26,7 +26,7 @@ public:
 
 private:
 	std::string name_;
-	Color color_;
+	Material mat_;
 };
 
 std::ostream& operator<<(std::ostream& os, Shape const& s);

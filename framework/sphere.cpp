@@ -11,8 +11,8 @@ Sphere::Sphere(glm::vec3 const& ctr, float rad):
 	ctr_{ctr},
 	rad_{rad}
 	{std::cout<<"makin' a lil' Sphere"<<std::endl;}
-Sphere::Sphere(glm::vec3 const& ctr, float rad, std::string const& name, Color const& farbe):
-	Shape(name, farbe),
+Sphere::Sphere(glm::vec3 const& ctr, float rad, std::string const& name, Material const& mat):
+	Shape(name, mat),
 	ctr_{ctr},
 	rad_{rad}
 	{std::cout<<"makin' a lil' Sphere"<<std::endl;}

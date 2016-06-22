@@ -10,8 +10,8 @@ Box::Box(glm::vec3 const& min, glm::vec3 const& max):
 	min_{min},
 	max_{max}
 	{std::cout<<"makin' a lil' Box"<<std::endl;}
-Box::Box(glm::vec3 const& min, glm::vec3 const& max, std::string const& name, Color const& farbe):
-	Shape(name, farbe),
+Box::Box(glm::vec3 const& min, glm::vec3 const& max, std::string const& name, Material const& mat):
+	Shape(name, mat),
 	min_{min},
 	max_{max}
 	{std::cout<<"makin' a lil' Box"<<std::endl;}

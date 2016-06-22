@@ -2,11 +2,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-using namespace std;
+#include "material.hpp"
+#include <map>
+#include <sstream>
+
 
 int main () {
+  using namespace std;
   string line;
   ifstream myfile ("../Material.sdf");
+
+  map<string, Material> materials;
+
   if (myfile.is_open())
   {
     while ( getline (myfile,line) )

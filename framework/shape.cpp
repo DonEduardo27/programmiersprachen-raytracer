@@ -2,12 +2,12 @@
 #include <iostream>
 
 Shape::Shape(): 
-name_{"ELShape"},color_{0,0,0}
+name_{"ELShape"},mat_{}
 {
   std::cout<<"makin' a lil' Shape"<<std::endl;
 }
-Shape::Shape(std::string const& name, Color const& color):
-name_{name},color_{color}
+Shape::Shape(std::string const& name, Material const& mat):
+name_{name},mat_{mat}
 {
     std::cout<<"makin' a lil' Shape"<<std::endl;
 }
@@ -21,9 +21,9 @@ std::string Shape::getname() const
 {
   return name_;
 }
-Color const& Shape::getcolor() const
+Material const& Shape::getmat() const
 {
-  return color_;
+  return mat_;
 }
 std::ostream& operator<<(std::ostream& os, Shape const& s)
 {
@@ -31,6 +31,6 @@ std::ostream& operator<<(std::ostream& os, Shape const& s)
 }
 std::ostream & Shape::print ( std :: ostream & os ) const 
 {
-  os << "\n It's tellin' ya somethin' 'bout it: \n Ma Name's " << name_ << std::endl <<" and I look like "<< color_;
+  os << "\n It's tellin' ya somethin' 'bout it: \n Ma Name's " << name_ << std::endl <<" and I look like "<< mat_;
   return os;
 }

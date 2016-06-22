@@ -21,15 +21,13 @@ struct Material
 	ks_  {0.0f,0.0f,0.0f},
 	m_   {0}{}
 
-	Material(std::string name, Color ka, Color kd, Color ks, float m):
+	Material(std::string const& name, Color const& ka, Color const& kd, Color const& ks, float m):
 
 	name_{name},
 	ka_  {ka},
 	kd_  {kd},
 	ks_  {ks},
 	m_   {m}{}
-
-
 
 	friend std::ostream& operator<<(std::ostream& os, Material const& m ) 
 	{

@@ -7,7 +7,7 @@
 
 # include <glm/glm.hpp>
 # include <glm/gtx/intersect.hpp>
-TEST_CASE ("intersectRaySphere","[intersect]" )
+/*TEST_CASE ("intersectRaySphere","[intersect]" )
 {
 // Ray
 glm::vec3 ray_origin{0.0,0.0,0.0};
@@ -91,18 +91,18 @@ REQUIRE(!kgl.intersect(ronny, 0));
 REQUIRE(!kgl.intersect(roland,2));
 REQUIRE(!kgl.intersect(roland,0));
 }
-
+*/
 int main(int argc, char *argv[])
 {
 
-	Color red (255 , 0 , 0);
+	/*Color red (255 , 0 , 0);
 	glm :: vec3 position (0 ,0, 0);
 	Sphere * s1 = new Sphere ( position , 1.2 , " sphere0 ", red  );
 	Shape * s2  = new Sphere ( position , 1.2 , " sphere1 ", red  );
 	s1 -> print ( std :: cout );
 	s2 -> print ( std :: cout );
 	delete s1 ;
-	delete s2 ;
+	delete s2 ;*/
 
   return Catch::Session().run(argc, argv);
 }
