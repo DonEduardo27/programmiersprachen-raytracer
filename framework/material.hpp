@@ -31,11 +31,11 @@ struct Material
 
 	friend std::ostream& operator<<(std::ostream& os, Material const& m ) 
 	{
-		os << "name: " << m.name_ << std::endl
-		<<"ka: "<< m.ka_<< std::endl
-		<<"kd: "<< m.kd_<< std::endl
-		<<"ks: "<< m.ks_<< std::endl
-		<<"m "  << m.m_ << std::endl;
+		os << "name: " << m.name_ << "\n"
+		<<"ka: "<< m.ka_
+		<<"kd: "<< m.kd_
+		<<"ks: "<< m.ks_
+		<<"m: "  << m.m_ << "\n";
 		return os;
 	}
 

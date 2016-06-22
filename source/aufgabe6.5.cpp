@@ -18,7 +18,31 @@ int main () {
   {
     while ( getline (myfile,line) )
     {
-      cout << line << '\n';
+      stringstream ss;
+      ss<<line;
+      Material mat;
+      string keyword;
+      ss>>keyword;
+      ss>>keyword;
+      ss>>mat.name_;
+      //read ambient term
+      ss >> mat.ka_.r;
+      ss >> mat.ka_.g;
+      ss >> mat.ka_.b;
+      //read diffuse term
+      ss >> mat.kd_.r;
+      ss >> mat.kd_.g;
+      ss >> mat.kd_.b;
+      //read specular term
+      ss >> mat.ks_.r;
+      ss >> mat.ks_.g;
+      ss >> mat.ks_.b;
+
+      ss >> mat.m_;
+
+      materials[mat.name_] = mat;
+
+      cout<<mat;
     }
     myfile.close();
   }
