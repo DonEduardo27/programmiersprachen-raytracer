@@ -15,8 +15,8 @@ public:
 	float area()   const override;
 	float volume() const override;
 
-	glm::vec3 const& getmin() const;
-	glm::vec3 const& getmax() const;
+	const glm::vec3 &getmin() const;
+	const glm::vec3 &getmax() const;
 
 	std::ostream & print ( std :: ostream & os ) const override;
 

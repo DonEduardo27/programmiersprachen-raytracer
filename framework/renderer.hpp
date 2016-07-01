@@ -19,9 +19,11 @@
 class Renderer
 {
 public:
-  Renderer(unsigned w, unsigned h, std::string const& file);
+  Renderer(/*Scene const& scene,*/ unsigned w, unsigned h, std::string const& file);
 
   void render();
+  // Color raytrace(Ray const& ray, unsigned depth) const
+  // Color shade(OptionalHit const&, Ray const&, unsigned depth) const
   void write(Pixel const& p);
 
   inline std::vector<Color> const& colorbuffer() const
@@ -30,6 +32,7 @@ public:
   }
 
 private:
+  //Scene scene_;
   unsigned width_;
   unsigned height_;
   std::vector<Color> colorbuffer_;
