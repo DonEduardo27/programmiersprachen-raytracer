@@ -1,4 +1,5 @@
 #define CATCH_CONFIG_RUNNER
+
 #include <catch.hpp>
 #include "box.hpp"
 #include "sphere.hpp"
@@ -8,6 +9,7 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtx/intersect.hpp>
+
 TEST_CASE ("intersectRaySphere","[intersect]" )
 {
 	glm::vec3 ray_origin{0.0,0.0,0.0};
@@ -101,18 +103,36 @@ TEST_CASE("6","[six]")
 	REQUIRE(!kgl.intersect(roland,2));
 	REQUIRE(!kgl.intersect(roland,0));
 }
+TEST_CASE("boxintersect", "[box]")
+{
+  Box b{glm::vec3{-0.0f}, glm::vec3{1.0f}};
+  glm::vec3 origin{-1.0f,-1.0f,-1.0f};
+  glm::vec3 direction{1.0f,1.0f,1.0f};
+
+  glm::vec3 origin2{2.0f,2.0f,2.0f};
+  glm::vec3 direction2{-1.0f,-1.0f,-1.0f};
+
+  glm::vec3 origin3{-5.5f,-153.5f,98.5f};
+  glm::vec3 direction3 = glm::vec3(0.5f,0.5f,0.5f) - origin3;
+
+  glm::vec3 origin4{1.1f,1.1f,1.1f};
+  glm::vec3 direction4{2.0f,2.0f,2.0f};
+
+
+  Ray triffter{origin,direction};
+  Ray triffter2{origin2,direction2};
+  Ray triffter3{origin3,direction3};
+  Ray triffter4{origin4,direction4};
+  
+  float x = 1.0f;
+
+  REQUIRE(b.intersect(triffter, x));
+  REQUIRE(b.intersect(triffter2, x));
+  REQUIRE(b.intersect(triffter3, x));
+  REQUIRE(!b.intersect(triffter4, x));
+}
 
 int main(int argc, char *argv[])
 {
-
-	/*Color red (255 , 0 , 0);
-	glm :: vec3 position (0 ,0, 0);
-	Sphere * s1 = new Sphere ( position , 1.2 , " sphere0 ", red  );
-	Shape * s2  = new Sphere ( position , 1.2 , " sphere1 ", red  );
-	s1 -> print ( std :: cout );
-	s2 -> print ( std :: cout );
-	delete s1 ;
-	delete s2 ;*/
-
   return Catch::Session().run(argc, argv);
 }
